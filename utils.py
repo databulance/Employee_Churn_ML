@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import pickle
+import joblib  # Import joblib for loading the model
 
 class PrepProcessor:
     # You can add any preprocessing methods you need here
@@ -10,6 +10,7 @@ class PrepProcessor:
 columns = ['number_project', 'overworked', 'last_evaluation', 'tenure']
 
 def load_model(model_path):
-    with open(model_path, 'rb') as model_file:
-        model = pickle.load(model_file)
+    # Use joblib.load to load the model from a joblib file
+    model = joblib.load(model_path)
     return model
+
