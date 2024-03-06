@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pickle
+import joblib
 from utils import load_model
 
 # Load the model using pickle
-model_path = 'https://github.com/databulance/Employee_Churn_ML/blob/main/hr_rf2.pickle'
+model_path = 'https://github.com/databulance/Employee_Churn_ML/blob/main/hr_rf2.joblib'
 model = load_model(model_path)
 
 st.title("Predicting if an employee will stay or leave Salifort")
