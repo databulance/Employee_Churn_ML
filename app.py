@@ -5,7 +5,7 @@ import joblib
 from utils import load_model
 
 # Load the model using pickle
-model_path = 'https://github.com/databulance/Employee_Churn_ML/blob/main/hr_rf2.joblib'
+model_path = 'hr_rf2.joblib'
 model = load_model(model_path)
 
 st.title("Predicting if an employee will stay or leave Salifort")
